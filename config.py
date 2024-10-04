@@ -1,7 +1,4 @@
 import os
 
 # Credenciales y configuración de la base de datos
-DATABASE_URL = os.getenv("DATABASE_URL", "user=postgres.squjfhvfoiuthahxyxyd password=[i02au4|9ff87Lzz#?JA.] host=aws-0-us-west-1.pooler.supabase.com port=6543 dbname=postgres")
-
-# Configuraciones adicionales (si es necesario)
-DEBUG_MODE = os.getenv("DEBUG_MODE", True)
+DATABASE_URL = r"postgresql://postgres.squjfhvfoiuthahxyxyd:xH0`\+KNKCl;G?Z:W/U9Oyx?S2.Q9a|gG4\NeFYfHPN7xHJfKM@aws-0-us-west-1.pooler.supabase.com:6543/postgres"

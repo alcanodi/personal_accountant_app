@@ -23,13 +23,14 @@ if st.button('Crear Cuenta'):
 
 # Registrar una nueva transacción
 st.header('Registrar Transacción')
+date_id = st.date_input('Fecha de la transacción')
 debit_account_id = st.number_input('ID Cuenta Débito', min_value=1)
 credit_account_id = st.number_input('ID Cuenta Crédito', min_value=1)
 amount = st.number_input('Monto de la transacción', min_value=0.0)
 description = st.text_area('Descripción de la transacción')
 
 if st.button('Registrar Transacción'):
-    success, message = create_transaction(debit_account_id, credit_account_id, amount, description)
+    success, message = create_transaction(date_id,debit_account_id, credit_account_id, amount, description)
     if success:
         st.success(message)
     else:

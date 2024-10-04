@@ -15,14 +15,14 @@ def create_transaction(date_id,debit_account_id, credit_account_id, amount, desc
         session.add(transaction)
 
         # Actualizar saldos de las cuentas involucradas
-        '''debit_account = session.query(Account).get(debit_account_id)
+        debit_account = session.query(Account).get(debit_account_id)
         credit_account = session.query(Account).get(credit_account_id)
 
         if debit_account and credit_account:
             debit_account.balance -= amount
             credit_account.balance += amount
         else:
-            raise Exception("Una de las cuentas no existe.")'''
+            raise Exception("Una de las cuentas no existe.")
 
         session.commit()
         return True, "Transacción registrada con éxito"
